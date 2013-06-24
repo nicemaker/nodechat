@@ -1,9 +1,27 @@
+@media only screen and (max-width: 480px) {
+    #messagesWrapper{
+       width:100% !important;
+    }
+    
+    #translations{
+       width:100% !important;
+    }
+    
+    .menu{
+       display: block !important;
+    }
+ 
+}
 
+div{
+    padding:0px;
+    margin:0px;
+}
 
 body{
     font-family: Helvetica, Arial, sans-serif;
     font-size:16pt;
-    background: #E80C7A;
+    background: #D80C4A;
 }
 
 input, textarea{
@@ -12,7 +30,7 @@ input, textarea{
     padding:5px;
     border: 0px solid;
     border-radius: 11px;
-    background: #EEEEEE;
+    background: #DEDEDE;
     outline: none;
     
 }
@@ -21,6 +39,7 @@ input[type="submit"]{
     background: #FF530D;
     border: #000000;
     color: #ffffff;
+    -webkit-appearance: none;
     
    
 }
@@ -34,11 +53,6 @@ input[type="submit"]{
     margin-top: 10px;
 }
 
-@media only screen and (max-width: 480px) {
- .menu{
-    display: block !important;
- }
-}
 
 .button{
     display: inline-block;
@@ -51,10 +65,15 @@ input[type="submit"]{
     font-size: 14pt;
 }
 
+.button.english{
+    display:none;
+}
+
 #nickname{
        position: relative;
        display: block;  
-       width:50%;
+       width:80%;
+       padding:20px;
 
 }
 
@@ -62,6 +81,8 @@ input[type="submit"]{
 #nickname input[type="text"]{
     width:200px;
     float:left;
+    margin-right:10px;
+    padding:5px;
 }
 
 #nickname input[type="submit"]{
@@ -69,21 +90,23 @@ input[type="submit"]{
 
 #chat{
     position: relative;
-    width: 90%;
+    width: 98%;
     display: none;
+    overflow: hidden;
+}
+
+.status{
+    color: #6D8DEF;
+    font-size: 12pt;
 }
 
 #translations{
     position: relative;
+    width:98%;
     white-space: nowrap;
 }
 
-@media only screen and (max-width: 480px) {
- #translations{
-    width:100% !important;
-    overflow: hidden;
- }
-}
+
 
 #messagesWrapper{
     position: relative;
@@ -91,17 +114,14 @@ input[type="submit"]{
     display: inline-block;
 }
 
-@media only screen and (max-width: 480px) {
- #messagesWrapper{
-    width:100% !important;
- }
-}
+
 
 .messages{
     display: block;
     width: 100%;
     background: #FAFAFA;
     border-radius: 11px;
+    white-space: normal;
 
 }
 
@@ -121,9 +141,11 @@ input[type="submit"]{
 
 #message{
     clear: both;
-    width:90%;
+    width:97%;
     resize: none;
     height:80px;
     margin-top:10px;
     max-width: 400px;
+    background: #FFFADA;
+    color: #000000;
 }

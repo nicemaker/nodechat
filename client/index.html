@@ -7,15 +7,15 @@
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="http://nodechat.nicemaker.me:15881/socket.io/socket.io.js"></script>
         <script src="js/chatClient.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 <body>
 
 
     
 <div class="centerWrapper">
-
     <form id="nickname">
+        <p>Please tell us you name before you start!</p>
         <input id="nickname" type="text" placeholder="Nickname"/>
         <input type="submit" value="Chat"/>
     </form>
@@ -29,13 +29,13 @@
             </div>
             <div id="messagesWrapper">
                 <div id="french" class="messages" >
-                    <p class='label'>French</p>
+                    <p class='label'>French Translation from Google</p>
                 </div>
             </div>
         </div>
         <textarea id="message" placeholder="Your Message"></textarea>
         <div class="menu">
-            <div class="button french">French Tranlation</div>
+            <div class="button french">French Translation</div>
             <div class="button english">English</div>
         </div>
     </div>
