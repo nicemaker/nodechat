@@ -2,6 +2,7 @@
 
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <title>Responsive Chat With Node JS and socket.io.js</title>
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="http://localhost:8080/socket.io/socket.io.js"></script>
@@ -9,18 +10,35 @@
     </head>
 <body>
 
-<form id="nickname">
-<input id= "nickname" type="text" placeholder="Nickname"/>
-<input type="submit" value="Chat"/>
 
-</form>
-<div id="chat">
-    <div id="english"></div>
-    <div id="french"></div>
     
-    <textarea id="message" placeholder="Your Message"></textarea>
-</div>
+<div class="centerWrapper">
+    <div class="menu">
+        <div class="button french">French Tranlation</div>
+        <div class="button english">English</div>
+    </div>
+    <form id="nickname">
+        <input id="nickname" type="text" placeholder="Nickname"/>
+        <input type="submit" value="Chat"/>
+    </form>
 
+    <div id="chat">
+        <div id="translations">
+            <div id="messagesWrapper">
+                <div id="english" class="messages">
+                    <p class='label'>English</p>
+                </div>
+            </div>
+            <div id="messagesWrapper">
+                <div id="french" class="messages" >
+                    <p class='label'>French</p>
+                </div>
+            </div>
+        </div>
+        <textarea id="message" placeholder="Your Message"></textarea>
+        
+    </div>
+</div>
 
 </body>
 </html>

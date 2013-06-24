@@ -22,13 +22,19 @@ var chat = ( function($){
         });
         
         $('#message').keyup( function(e){
-            if(e.which == 13){
+            if(e.which == 13 && !e.shiftKey){
                 sendMessage( $(this).val() );
                 $(this).val('')
             }
         });        
         
     } );
+    
+    
+    function updateDisplay() {
+        $(window).scrollTop(  $(window).height() );
+    }
+    
     
     function sendMessage( val ) {
         socket.emit('msg', val );
@@ -45,7 +51,7 @@ var chat = ( function($){
                $('#french').append( '<p>' + googleTrans.data.translations[0].translatedText + '</p>' );
             }
         );
-        
+        updateDisplay();
     }
     
 }(jQuery));

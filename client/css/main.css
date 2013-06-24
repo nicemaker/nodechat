@@ -1,0 +1,129 @@
+
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:16pt;
+    background: #E80C7A;
+}
+
+input, textarea{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:15pt;
+    padding:5px;
+    border: 0px solid;
+    border-radius: 11px;
+    background: #EEEEEE;
+    outline: none;
+    
+}
+
+input[type="submit"]{
+    background: #FF530D;
+    border: #000000;
+    color: #ffffff;
+    
+   
+}
+
+.centerWrapper{
+    
+}
+
+.menu{
+    display: none;
+}
+
+@media all and (max-width: 500px) {
+ .menu{
+    display: block !important;
+ }
+}
+
+.button{
+    display: inline-block;
+    cursor: pointer;
+    background: #000000;
+    color: #EEEEEE;
+    border: 0px;
+    border-radius: 11px;
+    padding: 5px;
+    font-size: 14pt;
+}
+
+#nickname{
+       position: relative;
+       display: block;  
+       width:50%;
+
+}
+
+
+#nickname input[type="text"]{
+    width:200px;
+    float:left;
+}
+
+#nickname input[type="submit"]{
+}
+
+#chat{
+    position: relative;
+    width: 90%;
+    padding: 20px;
+    display: none;
+}
+
+#translations{
+    position: relative;
+    white-space: nowrap;
+}
+
+@media all and (max-width: 500px) {
+ #translations{
+    width:100% !important;
+    overflow: hidden;
+ }
+}
+
+#messagesWrapper{
+    position: relative;
+    width:50%;
+    display: inline-block;
+}
+
+@media all and (max-width: 500px) {
+ #messagesWrapper{
+    width:100% !important;
+ }
+}
+
+.messages{
+    display: block;
+    width: 100%;
+    background: #FAFAFA;
+    border-radius: 11px;
+
+}
+
+
+.messages p{
+    margin:0px;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-right:10px;
+    padding-left:10px;
+}
+
+.label{
+    font-size: 12pt;
+    color: #AAAAAA;
+}
+
+#message{
+    clear: both;
+    width:90%;
+    resize: none;
+    height:80px;
+    margin-top:10px;
+    max-width: 400px;
+}
