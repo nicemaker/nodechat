@@ -5,7 +5,7 @@ var chat = ( function($){
     $(document).ready( function(){
         
         socket = io.connect('http://nodechat.nicemaker.me:15881');
-        $( 'body' ).append($(window).width());
+
         $('#nickname').submit( function(e){
             e.preventDefault();
             var name = $('#nickname input').first().val();
