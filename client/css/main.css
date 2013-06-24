@@ -33,7 +33,7 @@ input[type="submit"]{
     display: none;
 }
 
-@media all and (max-width: 500px) {
+@media only screen and (max-width: 480px) {
  .menu{
     display: block !important;
  }
@@ -78,7 +78,7 @@ input[type="submit"]{
     white-space: nowrap;
 }
 
-@media all and (max-width: 500px) {
+@media only screen and (max-width: 480px) {
  #translations{
     width:100% !important;
     overflow: hidden;
@@ -91,7 +91,7 @@ input[type="submit"]{
     display: inline-block;
 }
 
-@media all and (max-width: 500px) {
+@media only screen and (max-width: 480px) {
  #messagesWrapper{
     width:100% !important;
  }

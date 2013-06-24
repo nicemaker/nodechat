@@ -5,18 +5,16 @@
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <title>Responsive Chat With Node JS and socket.io.js</title>
         <script src="js/jquery-1.9.1.min.js"></script>
-        <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+        <script src="http://nodechat.nicemaker.me:15881/socket.io/socket.io.js"></script>
         <script src="js/chatClient.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
 <body>
 
 
     
 <div class="centerWrapper">
-    <div class="menu">
-        <div class="button french">French Tranlation</div>
-        <div class="button english">English</div>
-    </div>
+
     <form id="nickname">
         <input id="nickname" type="text" placeholder="Nickname"/>
         <input type="submit" value="Chat"/>
@@ -38,6 +36,12 @@
         <textarea id="message" placeholder="Your Message"></textarea>
         
     </div>
+    
+    <div class="menu">
+        <div class="button french">French Tranlation</div>
+        <div class="button english">English</div>
+    </div>
+    
 </div>
 
 </body>
