@@ -32,6 +32,7 @@ var chat = ( function($){
         
     } );
     
+    /* incoming messages from server */
     function onUpdate( data ) {
         var translateToken = data.message;
         var preToken;
@@ -72,7 +73,26 @@ var chat = ( function($){
             $('#french').append( transHTML );
         });
     }
-                
+    
+    /* sends message to server */
+    function sendTalk( val ) {
+        socket.emit( 'message', { type: 'talk', user: user, message: val } );
+    }
+    
+    /* translates token into french */
+    function translate( val, callback ) {
+        $.get( 'https://www.googleapis.com/language/translate/v2',{
+                key:'AIzaSyCoY_uJ22vg_v9gIlh0u58398PEmrTFYFM',
+                source:'en',
+                target:'fr',
+                q:val
+            },
+            callback
+        );
+        updateDisplay();
+    }
+    
+    /* language button event */           
     function onLanguage( e ) {
             if( $(this).attr( 'class' ).indexOf('english') == -1 ){
                
@@ -83,6 +103,7 @@ var chat = ( function($){
                 setState( 'default');
             }
     }
+    
     
     function setState( val ){
         if ( val == undefined || val == '' || val == null )
@@ -136,20 +157,5 @@ var chat = ( function($){
     }
     
     
-    function sendTalk( val ) {
-        socket.emit( 'message', { type: 'talk', user: user, message: val } );
-    }
-    
-    function translate( val, callback ) {
-        $.get( 'https://www.googleapis.com/language/translate/v2',{
-                key:'AIzaSyCoY_uJ22vg_v9gIlh0u58398PEmrTFYFM',
-                source:'en',
-                target:'fr',
-                q:val
-            },
-            callback
-        );
-        updateDisplay();
-    }
-    
+
 }(jQuery));
